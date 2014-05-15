@@ -1,4 +1,12 @@
  @import "bootstrap";
+
+ body {
+ 	font-size: 18px;
+ 	color: #5C5C5C;
+ }
+ .btn {
+ 	font-weight: bold !important;
+ }
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
