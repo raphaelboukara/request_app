@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Le titre de la pétition</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, nemo sed placeat voluptatem architecto velit consectetur temporibus fuga sint. Incidunt, perferendis, pariatur, rem nemo distinctio sequi voluptates atque voluptatibus facere itaque quos deserunt? Accusamus, molestiae vitae inventore reprehenderit iusto rerum hic soluta tempora recusandae minus repellendus incidunt facere ab possimus reiciendis enim in laudantium tenetur doloremque quia velit non quo eum. Omnis, praesentium, tenetur, voluptate at soluta magni repellendus perspiciatis voluptatum aperiam voluptatibus dolorum dolore obcaecati doloremque quibusdam facere sint similique adipisci optio harum recusandae nulla vel in quo maiores nam ab fugiat explicabo quos nisi est eos aut quod cum? Nostrum, at, veniam provident atque aliquam ducimus rem dicta voluptas beatae aut eaque deserunt tempore veritatis voluptates blanditiis perferendis nihil accusantium voluptatem voluptate non? Nisi, nihil, at, possimus saepe reprehenderit impedit nostrum fugiat distinctio beatae iusto assumenda voluptatem officiis dicta quia autem vero ullam perspiciatis ipsam exercitationem voluptas incidunt ex placeat expedita totam temporibus est sed cum esse numquam repellendus aperiam omnis tempora similique ducimus soluta quis sit qui provident id sunt debitis culpa. Aliquam, saepe, numquam ipsam adipisci quos tenetur qui fugiat nesciunt est illum error architecto. Perspiciatis, quae fugit ipsum reiciendis sit nisi adipisci laudantium natus ad excepturi repellendus aperiam. Inventore, pariatur, voluptatum quam porro vero iure numquam officia nostrum autem adipisci a quia beatae nemo incidunt cum nulla non molestias amet aliquam tempora. Quae, similique, porro quam quas earum vitae est ea libero incidunt itaque dolorum quidem numquam sunt excepturi delectus culpa totam animi eveniet esse molestiae dolore iure iusto! Hic, architecto, ab, magni vel aperiam nemo veniam doloremque temporibus nam veritatis voluptates animi nihil incidunt rem tempore accusantium labore alias repellendus ipsum molestias consequatur velit inventore consectetur consequuntur totam. Vitae, ratione, pariatur tempora deleniti a enim culpa tenetur temporibus adipisci dolores ipsum voluptatum sapiente neque!</p>
+
+<%= link_to 'Ajouter votre signature', new_user_path %>
+<br><br>
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Prénom</th>
+      <th>Nom</th>
+      <th>Email</th>
+      <!-- <th></th>
+      <th></th>
+      <th></th> -->
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.firstname %></td>
+        <td><%= user.lastname %></td>
+        <td><%= user.email %></td>
+        <!-- <td><%= link_to 'Show', user %></td>
+        <td><%= link_to 'Edit', edit_user_path(user) %></td>
+        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+
