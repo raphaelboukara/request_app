@@ -11,16 +11,14 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.text_field :firstname, :placeholder => "prénom" %>
+  <div class="form-group">
+    <%= f.text_field :firstname, :placeholder => "prénom", :class => "form-control" %>
   </div>
-  <div class="field">
-    <%= f.text_field :lastname, :placeholder => "nom" %>
+  <div class="form-group">
+    <%= f.text_field :lastname, :placeholder => "nom", :class => "form-control" %>
   </div>
-  <div class="field">
-    <%= f.text_field :email, :placeholder => "email" %>
+  <div class="form-group">
+    <%= f.text_field :email, :placeholder => "email", :class => "form-control" %>
   </div>
-  <div class="actions">
-    <%= f.submit "Je signe" %>
-  </div>
+  <%= f.submit "Je signe", :class => "btn btn-primary" %>
 <% end %>
