@@ -19,13 +19,13 @@ module RequestApp
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
-    config.assets.precompile += ["fontawesome-webfont.ttf",
-                         "fontawesome-webfont.eot",
-                         "fontawesome-webfont.svg",
-                         "fontawesome-webfont.woff",
-                         "glyphicons-halflings-regular",
-                         "glyphicons-halflings-regular",
-                         "glyphicons-halflings-regular",
-                         "glyphicons-halflings-regular"]
+    config.assets.precompile += ["bootstrap/fontawesome-webfont.ttf",
+                         "bootstrap/fontawesome-webfont.eot",
+                         "bootstrap/fontawesome-webfont.svg",
+                         "bootstrap/fontawesome-webfont.woff",
+                         "bootstrap/glyphicons-halflings-regular",
+                         "bootstrap/glyphicons-halflings-regular",
+                         "bootstrap/glyphicons-halflings-regular",
+                         "bootstrap/glyphicons-halflings-regular"]
   end
 end
