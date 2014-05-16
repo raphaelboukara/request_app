@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
-  http_basic_authenticate_with name: "admin", password: "ozadmin", except: [:index, :show]
+  http_basic_authenticate_with name: "admin", password: "ozadmin", except: [:index, :show, :new, :create]
 
   def index
     @users = User.all
