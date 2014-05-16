@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
+  http_basic_authenticate_with name: "admin", password: "ozadmin", except: [:index, :show]
 
   def index
     @users = User.all
@@ -14,8 +15,8 @@ class UsersController < ApplicationController
   end
 
   # GET /users/1/edit
-  #def edit
-  #end
+  def edit
+  end
 
   def create
     @user = User.new(user_params)
@@ -29,25 +30,22 @@ class UsersController < ApplicationController
     end
   end
 
-  #def update
-  #  respond_to do |format|
-  #    if @user.update(user_params)
-  #      format.html { redirect_to @user, notice: 'User was successfully updated.' }
-  #      format.json { head :no_content }
-  #    else
-  #      format.html { render action: 'edit' }
-  #      format.json { render json: @user.errors, status: :unprocessable_entity }
-  #    end
-  #  end
-  #end
+  def update
+    respond_to do |format|
+      if @user.update(user_params)
+        format.html { redirect_to users_path, notice: 'Modification enregistrées!' }
+      else
+        format.html { render action: 'edit' }
+      end
+    end
+  end
 
-  #def destroy
-  #  @user.destroy
-  #  respond_to do |format|
-  #    format.html { redirect_to users_url }
-  #    format.json { head :no_content }
-  #  end
-  #end
+  def destroy
+    @user.destroy
+    respond_to do |format|
+      format.html { redirect_to users_url }
+    end
+  end
 
   private
     def set_user
